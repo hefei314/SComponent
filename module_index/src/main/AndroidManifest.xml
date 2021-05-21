@@ -3,7 +3,7 @@
     package="com.hefei.index">
 
     <application>
-        <activity android:name=".MainActivity"/>
+        <activity android:name=".main.IndexMainActivity"/>
     </application>
 
 </manifest>

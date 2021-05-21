@@ -1,0 +1,175 @@
+ext {
+    compileSdkVersion = 30
+    buildToolsVersion = "30.0.3"
+    minSdkVersion     = 21
+    targetSdkVersion  = 30
+
+    versionCode       = 1
+    versionName       = "1.0.0"
+
+    versions = [
+            /* androidx */
+            appcompatVersion             : "1.2.0",
+            materialVersion              : "1.0.0",
+            cardviewVersion              : "1.0.0",
+            viewpager2Version            : "1.0.0",
+            recyclerviewVersion          : "1.1.0",
+            vectordrawableVersion        : "1.1.0",
+            constraintLayoutVersion      : "2.0.4",
+
+            multidexVersion              : "2.0.0",
+
+            /* okhttp */
+            okhttpVersion                : "4.9.1",
+
+            /* retrofit */
+            retrofitVersion              : "2.9.0",
+
+            /* rx3 */
+            rxjavaVersion                : "3.0.0",
+            rxandroidVersion             : "3.0.0",
+            rxlifecycleVersion           : "4.0.2",
+            rxpermissionsVersion         : "0.12",
+
+            /* dagger*/
+            daggerVersion                : "2.32.1",
+
+            /* test */
+            junitVersion                 : "4.13.2",
+            junitExtVersion              : "1.1.2",
+            espressoCoreVersion          : "3.3.0",
+
+            /* logger */
+            loggerVersion                : "2.2.0",
+
+            /* 数据库 */
+            greendaoVersion              : "3.3.0",
+
+            /* 屏幕适配 */
+            autosizeVersion              : "1.2.1",
+
+            /* 沉浸式状态栏 */
+            immersionbarVersion          : "3.0.0",
+
+            /* 工具类库 */
+            utilcodeVersion              : "1.30.6",
+
+            /* 路由框架 */
+            arouterVersion               : "1.5.1",
+            arouterCompilerVersion       : "1.2.1",
+
+            /* 图片框架 */
+            glideVersion                 : "4.12.0",
+
+            /* WebView框架 */
+            agentwebVersion              : "4.1.4",
+
+            /* 检查更新 */
+            updatePluginVersion          : "3.1.3",
+
+            /* 二维码框架 */
+            zxingVersion                 : "2.2",
+
+            /* 图表框架 */
+            MPAndroidChartVersion        : "3.1.0",
+
+            /* 加载动画 */
+            spinKitVersion               : "1.4.0",
+
+            /* lottie动画 */
+            lottieVersion                : "3.7.0",
+
+            /* 弹性布局 */
+            flexboxVersion               : "2.0.1",
+
+            /* 图片浏览 */
+            photoviewVersion             : "2.3.0",
+
+            /* 日历控件 */
+            calendarviewVersion          : "3.7.1",
+
+            /* 搜索框 */
+            materialsearchviewVersion    : "1.4.0",
+
+            /* 日期时间选择器 */
+            materialdatetimepickerVersion: "3.2.1",
+    ]
+
+    dependencies = [
+            appcompat             : "androidx.appcompat:appcompat:${versions["appcompatVersion"]}",
+            material              : "com.google.android.material:material:${versions["materialVersion"]}",
+            cardview              : "androidx.cardview:cardview:${versions["cardviewVersion"]}",
+            viewpager2            : "androidx.viewpager2:viewpager2:${versions["viewpager2Version"]}",
+            recyclerview          : "androidx.recyclerview:recyclerview:${versions["recyclerviewVersion"]}",
+            vectordrawable        : "androidx.vectordrawable:vectordrawable:${versions["vectordrawableVersion"]}",
+            constraintLayout      : "androidx.constraintlayout:constraintlayout:${versions["constraintLayoutVersion"]}",
+
+            multidex              : "androidx.multidex:multidex:${versions["multidexVersion"]}",
+
+            okhttp                : "com.squareup.okhttp3:okhttp:${versions["okhttpVersion"]}",
+            okhttpLog             : "com.squareup.okhttp3:logging-interceptor:${versions["okhttpVersion"]}",
+
+            disklrucache          : 'com.jakewharton:disklrucache:2.0.2',
+
+            retrofit              : "com.squareup.retrofit2:retrofit:${versions["retrofitVersion"]}",
+            converterGson         : "com.squareup.retrofit2:converter-gson:${versions["retrofitVersion"]}",
+            adapterRxjava         : "com.squareup.retrofit2:adapter-rxjava3:${versions["retrofitVersion"]}",
+
+            rxjava                : "io.reactivex.rxjava3:rxjava:${versions["rxjavaVersion"]}",
+            rxandroid             : "io.reactivex.rxjava3:rxandroid:${versions["rxandroidVersion"]}",
+
+            rxlifecycle           : "com.trello.rxlifecycle4:rxlifecycle:${versions["rxlifecycleVersion"]}",
+            rxlifecycleAndroid    : "com.trello.rxlifecycle4:rxlifecycle-android:${versions["rxlifecycleVersion"]}",
+            rxlifecycleComponents : "com.trello.rxlifecycle4:rxlifecycle-components:${versions["rxlifecycleVersion"]}",
+
+            rxpermissions         : "com.github.tbruyelle:rxpermissions:${versions["rxpermissionsVersion"]}",
+
+            dagger                : "com.google.dagger:dagger:${versions["daggerVersion"]}",
+            daggerCompiler        : "com.google.dagger:dagger-compiler:${versions["daggerVersion"]}",
+
+            junit                 : "junit:junit:${versions["junitVersion"]}",
+            junitExt              : "androidx.test.ext:junit:${versions["junitExtVersion"]}",
+            espressoCore          : "androidx.test.espresso:espresso-core:${versions["espressoCoreVersion"]}",
+
+            logger                : "com.orhanobut:logger:${versions["loggerVersion"]}",
+
+            greendao              : "org.greenrobot:${versions["greendaoVersion"]}",
+
+            autosize              : "me.jessyan:autosize:${versions["autosizeVersion"]}",
+
+            immersionbar          : "com.gyf.immersionbar:immersionbar:${versions["immersionbarVersion"]}",
+            immersionbarComponents: "com.gyf.immersionbar:immersionbar-components:${versions["immersionbarVersion"]}",
+
+            utilcode              : "com.blankj:utilcodex:${versions["utilcodeVersion"]}",
+
+            arouter               : "com.alibaba:arouter-api:${versions["arouterVersion"]}",
+            arouterCompiler       : "com.alibaba:arouter-compiler:${versions["arouterCompilerVersion"]}",
+
+            glide                 : "com.github.bumptech.glide:glide:${versions["glideVersion"]}",
+            glideCompiler         : "com.github.bumptech.glide:compiler:${versions["glideVersion"]}",
+
+            agentweb              : "com.just.agentweb:agentweb-androidx:${versions["agentwebVersion"]}",
+            agentwebFilechooser   : "com.just.agentweb:filechooser-androidx:${versions["agentwebVersion"]}",
+            agentwebDownloader    : "com.download.library:downloader-androidx:${versions["agentwebVersion"]}",
+
+            updatePlugin          : "com.github.yjfnypeu:UpdatePlugin:${versions["updatePluginVersion"]}",
+
+            zxing                 : "cn.yipianfengye.android:zxing-library:${versions["zxingVersion"]}",
+
+            MPAndroidChart        : "com.github.PhilJay:MPAndroidChart:v${versions["MPAndroidChartVersion"]}",
+
+            spinKit               : "com.github.ybq:Android-SpinKit:${versions["spinKitVersion"]}",
+
+            lottie                : "com.airbnb.android:lottie:${versions["lottieVersion"]}",
+
+            flexbox               : "com.google.android:flexbox:${versions["flexboxVersion"]}",
+
+            photoview             : "com.github.chrisbanes:PhotoView:${versions["photoviewVersion"]}",
+
+            calendarview          : "com.haibin:calendarview:${versions["calendarviewVersion"]}",
+
+            materialsearchview    : "com.miguelcatalan:materialsearchview:${versions["materialsearchviewVersion"]}",
+
+            materialdatetimepicker: "co.infinum:materialdatetimepicker-support:${versions["materialdatetimepickerVersion"]}",
+    ]
+}
