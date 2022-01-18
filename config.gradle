@@ -73,6 +73,9 @@ ext {
             /* 图表框架 */
             MPAndroidChartVersion        : "3.1.0",
 
+            /* 下拉刷新 */
+            smartRefreshLayoutVersion    : "2.0.3",
+
             /* 加载动画 */
             spinKitVersion               : "1.4.0",
 
@@ -96,80 +99,89 @@ ext {
     ]
 
     dependencies = [
-            appcompat             : "androidx.appcompat:appcompat:${versions["appcompatVersion"]}",
-            material              : "com.google.android.material:material:${versions["materialVersion"]}",
-            cardview              : "androidx.cardview:cardview:${versions["cardviewVersion"]}",
-            viewpager2            : "androidx.viewpager2:viewpager2:${versions["viewpager2Version"]}",
-            recyclerview          : "androidx.recyclerview:recyclerview:${versions["recyclerviewVersion"]}",
-            vectordrawable        : "androidx.vectordrawable:vectordrawable:${versions["vectordrawableVersion"]}",
-            constraintLayout      : "androidx.constraintlayout:constraintlayout:${versions["constraintLayoutVersion"]}",
+            appcompat                 : "androidx.appcompat:appcompat:${versions["appcompatVersion"]}",
+            material                  : "com.google.android.material:material:${versions["materialVersion"]}",
+            cardview                  : "androidx.cardview:cardview:${versions["cardviewVersion"]}",
+            viewpager2                : "androidx.viewpager2:viewpager2:${versions["viewpager2Version"]}",
+            recyclerview              : "androidx.recyclerview:recyclerview:${versions["recyclerviewVersion"]}",
+            vectordrawable            : "androidx.vectordrawable:vectordrawable:${versions["vectordrawableVersion"]}",
+            constraintLayout          : "androidx.constraintlayout:constraintlayout:${versions["constraintLayoutVersion"]}",
 
-            multidex              : "androidx.multidex:multidex:${versions["multidexVersion"]}",
+            multidex                  : "androidx.multidex:multidex:${versions["multidexVersion"]}",
 
-            okhttp                : "com.squareup.okhttp3:okhttp:${versions["okhttpVersion"]}",
-            okhttpLog             : "com.squareup.okhttp3:logging-interceptor:${versions["okhttpVersion"]}",
+            okhttp                    : "com.squareup.okhttp3:okhttp:${versions["okhttpVersion"]}",
+            okhttpLog                 : "com.squareup.okhttp3:logging-interceptor:${versions["okhttpVersion"]}",
 
-            disklrucache          : 'com.jakewharton:disklrucache:2.0.2',
+            disklrucache              : 'com.jakewharton:disklrucache:2.0.2',
 
-            retrofit              : "com.squareup.retrofit2:retrofit:${versions["retrofitVersion"]}",
-            converterGson         : "com.squareup.retrofit2:converter-gson:${versions["retrofitVersion"]}",
-            adapterRxjava         : "com.squareup.retrofit2:adapter-rxjava3:${versions["retrofitVersion"]}",
+            retrofit                  : "com.squareup.retrofit2:retrofit:${versions["retrofitVersion"]}",
+            converterGson             : "com.squareup.retrofit2:converter-gson:${versions["retrofitVersion"]}",
+            adapterRxjava             : "com.squareup.retrofit2:adapter-rxjava3:${versions["retrofitVersion"]}",
 
-            rxjava                : "io.reactivex.rxjava3:rxjava:${versions["rxjavaVersion"]}",
-            rxandroid             : "io.reactivex.rxjava3:rxandroid:${versions["rxandroidVersion"]}",
+            rxjava                    : "io.reactivex.rxjava3:rxjava:${versions["rxjavaVersion"]}",
+            rxandroid                 : "io.reactivex.rxjava3:rxandroid:${versions["rxandroidVersion"]}",
 
-            rxlifecycle           : "com.trello.rxlifecycle4:rxlifecycle:${versions["rxlifecycleVersion"]}",
-            rxlifecycleAndroid    : "com.trello.rxlifecycle4:rxlifecycle-android:${versions["rxlifecycleVersion"]}",
-            rxlifecycleComponents : "com.trello.rxlifecycle4:rxlifecycle-components:${versions["rxlifecycleVersion"]}",
+            rxlifecycle               : "com.trello.rxlifecycle4:rxlifecycle:${versions["rxlifecycleVersion"]}",
+            rxlifecycleAndroid        : "com.trello.rxlifecycle4:rxlifecycle-android:${versions["rxlifecycleVersion"]}",
+            rxlifecycleComponents     : "com.trello.rxlifecycle4:rxlifecycle-components:${versions["rxlifecycleVersion"]}",
 
-            rxpermissions         : "com.github.tbruyelle:rxpermissions:${versions["rxpermissionsVersion"]}",
+            rxpermissions             : "com.github.tbruyelle:rxpermissions:${versions["rxpermissionsVersion"]}",
 
-            dagger                : "com.google.dagger:dagger:${versions["daggerVersion"]}",
-            daggerCompiler        : "com.google.dagger:dagger-compiler:${versions["daggerVersion"]}",
+            dagger                    : "com.google.dagger:dagger:${versions["daggerVersion"]}",
+            daggerCompiler            : "com.google.dagger:dagger-compiler:${versions["daggerVersion"]}",
 
-            junit                 : "junit:junit:${versions["junitVersion"]}",
-            junitExt              : "androidx.test.ext:junit:${versions["junitExtVersion"]}",
-            espressoCore          : "androidx.test.espresso:espresso-core:${versions["espressoCoreVersion"]}",
+            junit                     : "junit:junit:${versions["junitVersion"]}",
+            junitExt                  : "androidx.test.ext:junit:${versions["junitExtVersion"]}",
+            espressoCore              : "androidx.test.espresso:espresso-core:${versions["espressoCoreVersion"]}",
 
-            logger                : "com.orhanobut:logger:${versions["loggerVersion"]}",
+            logger                    : "com.orhanobut:logger:${versions["loggerVersion"]}",
 
-            greendao              : "org.greenrobot:${versions["greendaoVersion"]}",
+            greendao                  : "org.greenrobot:${versions["greendaoVersion"]}",
 
-            autosize              : "me.jessyan:autosize:${versions["autosizeVersion"]}",
+            autosize                  : "me.jessyan:autosize:${versions["autosizeVersion"]}",
 
-            immersionbar          : "com.gyf.immersionbar:immersionbar:${versions["immersionbarVersion"]}",
-            immersionbarComponents: "com.gyf.immersionbar:immersionbar-components:${versions["immersionbarVersion"]}",
+            immersionbar              : "com.gyf.immersionbar:immersionbar:${versions["immersionbarVersion"]}",
+            immersionbarComponents    : "com.gyf.immersionbar:immersionbar-components:${versions["immersionbarVersion"]}",
 
-            utilcode              : "com.blankj:utilcodex:${versions["utilcodeVersion"]}",
+            utilcode                  : "com.blankj:utilcodex:${versions["utilcodeVersion"]}",
 
-            arouter               : "com.alibaba:arouter-api:${versions["arouterVersion"]}",
-            arouterCompiler       : "com.alibaba:arouter-compiler:${versions["arouterCompilerVersion"]}",
+            arouter                   : "com.alibaba:arouter-api:${versions["arouterVersion"]}",
+            arouterCompiler           : "com.alibaba:arouter-compiler:${versions["arouterCompilerVersion"]}",
 
-            glide                 : "com.github.bumptech.glide:glide:${versions["glideVersion"]}",
-            glideCompiler         : "com.github.bumptech.glide:compiler:${versions["glideVersion"]}",
+            glide                     : "com.github.bumptech.glide:glide:${versions["glideVersion"]}",
+            glideCompiler             : "com.github.bumptech.glide:compiler:${versions["glideVersion"]}",
 
-            agentweb              : "com.just.agentweb:agentweb-androidx:${versions["agentwebVersion"]}",
-            agentwebFilechooser   : "com.just.agentweb:filechooser-androidx:${versions["agentwebVersion"]}",
-            agentwebDownloader    : "com.download.library:downloader-androidx:${versions["agentwebVersion"]}",
+            agentweb                  : "com.just.agentweb:agentweb-androidx:${versions["agentwebVersion"]}",
+            agentwebFilechooser       : "com.just.agentweb:filechooser-androidx:${versions["agentwebVersion"]}",
+            agentwebDownloader        : "com.download.library:downloader-androidx:${versions["agentwebVersion"]}",
 
-            updatePlugin          : "com.github.yjfnypeu:UpdatePlugin:${versions["updatePluginVersion"]}",
+            updatePlugin              : "com.github.yjfnypeu:UpdatePlugin:${versions["updatePluginVersion"]}",
 
-            zxing                 : "cn.yipianfengye.android:zxing-library:${versions["zxingVersion"]}",
+            zxing                     : "cn.yipianfengye.android:zxing-library:${versions["zxingVersion"]}",
 
-            MPAndroidChart        : "com.github.PhilJay:MPAndroidChart:v${versions["MPAndroidChartVersion"]}",
+            MPAndroidChart            : "com.github.PhilJay:MPAndroidChart:v${versions["MPAndroidChartVersion"]}",
 
-            spinKit               : "com.github.ybq:Android-SpinKit:${versions["spinKitVersion"]}",
+            smartRefreshLayout        : "com.scwang.smart:refresh-layout-kernel:${versions["smartRefreshLayoutVersion"]}",
+            smartRefreshHeaderClassics: "com.scwang.smart:refresh-header-classics:${versions["smartRefreshLayoutVersion"]}",
+            smartRefreshHeaderRadar   : "com.scwang.smart:refresh-header-radar:${versions["smartRefreshLayoutVersion"]}",
+            smartRefreshHeaderFalsify : "com.scwang.smart:refresh-header-falsify:${versions["smartRefreshLayoutVersion"]}",
+            smartRefreshHeaderMaterial: "com.scwang.smart:refresh-header-material:${versions["smartRefreshLayoutVersion"]}",
+            smartRefreshHeaderTwoLevel: "com.scwang.smart:refresh-header-two-level:${versions["smartRefreshLayoutVersion"]}",
+            smartRefreshFooterBall    : "com.scwang.smart:refresh-footer-ball:${versions["smartRefreshLayoutVersion"]}",
+            smartRefreshFooterClassics: "com.scwang.smart:refresh-footer-classics:${versions["smartRefreshLayoutVersion"]}",
 
-            lottie                : "com.airbnb.android:lottie:${versions["lottieVersion"]}",
+            spinKit                   : "com.github.ybq:Android-SpinKit:${versions["spinKitVersion"]}",
 
-            flexbox               : "com.google.android:flexbox:${versions["flexboxVersion"]}",
+            lottie                    : "com.airbnb.android:lottie:${versions["lottieVersion"]}",
 
-            photoview             : "com.github.chrisbanes:PhotoView:${versions["photoviewVersion"]}",
+            flexbox                   : "com.google.android:flexbox:${versions["flexboxVersion"]}",
 
-            calendarview          : "com.haibin:calendarview:${versions["calendarviewVersion"]}",
+            photoview                 : "com.github.chrisbanes:PhotoView:${versions["photoviewVersion"]}",
 
-            materialsearchview    : "com.miguelcatalan:materialsearchview:${versions["materialsearchviewVersion"]}",
+            calendarview              : "com.haibin:calendarview:${versions["calendarviewVersion"]}",
 
-            materialdatetimepicker: "co.infinum:materialdatetimepicker-support:${versions["materialdatetimepickerVersion"]}",
+            materialsearchview        : "com.miguelcatalan:materialsearchview:${versions["materialsearchviewVersion"]}",
+
+            materialdatetimepicker    : "co.infinum:materialdatetimepicker-support:${versions["materialdatetimepickerVersion"]}",
     ]
 }

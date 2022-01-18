@@ -61,6 +61,14 @@ dependencies {
     // update
     api rootProject.ext.dependencies["updatePlugin"]
     // parts
+    api rootProject.ext.dependencies["smartRefreshLayout"]
+    api rootProject.ext.dependencies["smartRefreshHeaderClassics"]
+    api rootProject.ext.dependencies["smartRefreshHeaderRadar"]
+    api rootProject.ext.dependencies["smartRefreshHeaderFalsify"]
+    api rootProject.ext.dependencies["smartRefreshHeaderMaterial"]
+    api rootProject.ext.dependencies["smartRefreshHeaderTwoLevel"]
+    api rootProject.ext.dependencies["smartRefreshFooterBall"]
+    api rootProject.ext.dependencies["smartRefreshFooterClassics"]
     api rootProject.ext.dependencies["lottie"]
     api rootProject.ext.dependencies["spinKit"]
     api rootProject.ext.dependencies["flexbox"]

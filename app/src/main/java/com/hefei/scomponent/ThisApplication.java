@@ -1,6 +1,5 @@
 package com.hefei.scomponent;
 
-import com.blankj.utilcode.util.Utils;
 import com.hefei.common.base.BaseApplication;
 
 /**

@@ -10,6 +10,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.viewbinding.ViewBinding;
 
+import com.gyf.immersionbar.ImmersionBar;
 import com.hefei.common.R;
 
 import java.lang.reflect.Method;
@@ -42,6 +43,7 @@ public abstract class BaseBindingActivity<T extends ViewBinding> extends AppComp
             Method method = aClass.getDeclaredMethod("inflate", LayoutInflater.class);
             binding = (T) method.invoke(null, getLayoutInflater());
             setContentView(binding.getRoot());
+            initImmersionBar();
             initViews();
             updateViews();
         } catch (Exception e) {
@@ -49,10 +51,16 @@ public abstract class BaseBindingActivity<T extends ViewBinding> extends AppComp
         }
     }
 
+    protected void initImmersionBar() {
+        ImmersionBar.with(this)
+                .fitsSystemWindows(true)
+                .statusBarColor(R.color.primaryWhite)
+                .statusBarDarkFont(true)
+                .init();
+    }
+
     protected void initActionbar(boolean showHomeAsUp) {
-        if (getSupportActionBar() != null) {
-            getSupportActionBar().setDisplayHomeAsUpEnabled(showHomeAsUp);
-        }
+        initActionbar(R.string.app_name, showHomeAsUp);
     }
 
     protected void initActionbar(@StringRes int resTitle, boolean showHomeAsUp) {
@@ -67,14 +75,18 @@ public abstract class BaseBindingActivity<T extends ViewBinding> extends AppComp
     }
 
     protected void initToolbar(Toolbar toolbar, boolean showHomeAsUp) {
-        initToolbar(toolbar, getString(R.string.app_name), showHomeAsUp);
+        CharSequence title = getString(R.string.app_name);
+        if (toolbar != null && toolbar.getTitle() != null && !"".contentEquals(toolbar.getTitle())) {
+            title = toolbar.getTitle();
+        }
+        initToolbar(toolbar, title, showHomeAsUp);
     }
 
     protected void initToolbar(Toolbar toolbar, @StringRes int resTitle, boolean showHomeAsUp) {
         initToolbar(toolbar, getString(resTitle), showHomeAsUp);
     }
 
-    protected void initToolbar(Toolbar toolbar, String title, boolean showHomeAsUp) {
+    protected void initToolbar(Toolbar toolbar, CharSequence title, boolean showHomeAsUp) {
         toolbar.setTitle(title);
         if (toolbar.getNavigationIcon() == null) {
             toolbar.setNavigationIcon(R.drawable.icon_back);
@@ -82,6 +94,16 @@ public abstract class BaseBindingActivity<T extends ViewBinding> extends AppComp
         setSupportActionBar(toolbar);
         if (getSupportActionBar() != null) {
             getSupportActionBar().setDisplayHomeAsUpEnabled(showHomeAsUp);
+        }
+    }
+
+    protected void setToolbarTitle(@StringRes int resTitle) {
+        setToolbarTitle(getString(resTitle));
+    }
+
+    protected void setToolbarTitle(String title) {
+        if (getSupportActionBar() != null) {
+            getSupportActionBar().setTitle(title);
         }
     }
 
